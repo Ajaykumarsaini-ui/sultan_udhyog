@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./about.scss";
+import banner from "../../assets/home/Hero_banner.jpg";
 
 const About = () => {
   const owner = {
@@ -36,7 +37,7 @@ const About = () => {
       >
         <img
           className="w-full h-[70vh] object-cover"
-          src="/src/assets/home/Hero_banner.jpg"
+          src={banner}
           alt="Company Banner"
         />
       </motion.div>

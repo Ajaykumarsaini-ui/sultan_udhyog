@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react"; // ✅ Lucide Icons
 import "./contact.scss";
 import Button from "../../components/Button";
+import banner from "../../assets/home/Hero_banner.jpg";
 
 const Contact = () => {
   // Animation variants
@@ -18,7 +19,7 @@ const Contact = () => {
 
 
 
-  
+
 
 
 
@@ -36,7 +37,7 @@ const Contact = () => {
       >
         <img
           className="w-full h-[70vh] object-cover"
-          src="/src/assets/home/Hero_banner.jpg"
+          src={banner}
           alt="Company Banner"
         />
       </motion.div>

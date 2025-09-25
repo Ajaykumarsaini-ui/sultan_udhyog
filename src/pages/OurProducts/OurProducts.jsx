@@ -8,6 +8,7 @@ import lining from "../../assets/home/Chips-Lining.jpg";
 import jali from "../../assets/products/Non-Fried-Potato-Chips-Jali.jpg";
 import lokeraloo from "../../assets/products/Raw-Potato-Chips-Locker-Aalu.jpeg";
 import Button from "../../components/Button";
+import banner from "../../assets/home/Hero_banner.jpg";
 
 const OurProducts = () => {
   const ourProducts = [
@@ -58,7 +59,7 @@ const OurProducts = () => {
       >
         <img
           className="w-full h-[70vh] object-cover"
-          src="/src/assets/home/Hero_banner.jpg"
+          src={banner}
           alt="Company Banner"
         />
       </motion.div>
