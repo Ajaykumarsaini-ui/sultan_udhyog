@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+
+.products-page {
+  .products-heading {
+    color: $color-dark;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+  }
+
+  
+}

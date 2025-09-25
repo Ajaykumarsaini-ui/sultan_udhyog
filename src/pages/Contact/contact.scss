@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.contact{
+    .contact-heading{
+        color: $color-dark;
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+    }
+}
+
+.submit-button{
+
+}

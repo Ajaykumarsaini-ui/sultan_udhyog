@@ -1,0 +1,33 @@
+my-app/
+│── public/               # Static assets (favicon, images, robots.txt, etc.)
+│── src/
+│   │── assets/           # Images, fonts, icons
+│   │   └── images/
+│   │── components/       # Reusable UI components (Button, Navbar, etc.)
+│   │── features/         # Redux slices (auth, users, products etc.)
+│   │   └── auth/
+│   │       ├── AuthSlice.js
+│   │       └── AuthService.js
+│   │── hooks/            # Custom React hooks
+│   │── layouts/          # Common layouts (DashboardLayout, AuthLayout)
+│   │── pages/            # Page components (Home, Login, Dashboard, etc.)
+│   │   └── dashboard/
+│   │       └── Dashboard.jsx
+│   │── routes/           # App routes (protected + public routing setup)
+│   │   └── AppRoutes.jsx
+│   │── services/         # API services (axios instance, API calls)
+│   │   └── api.js
+│   │── store/            # Redux store configuration
+│   │   └── store.js
+│   │── styles/           # SCSS / Tailwind custom styles
+│   │   ├── _variables.scss
+│   │   ├── _mixins.scss
+│   │   └── main.scss
+│   │── utils/            # Helper functions (formatDate, validators, etc.)
+│   │── App.jsx           # Root React component
+│   │── main.jsx          # App entry point
+│
+│── .env                  # Environment variables (API keys, URLs, etc.)
+│── index.html            # Root HTML file
+│── package.json
+│── vite.config.js

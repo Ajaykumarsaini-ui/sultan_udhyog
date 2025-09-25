@@ -1,0 +1,45 @@
+// src/components/Navbar.scss
+@import "../../styles/variables.scss";
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: $color-offwhite;
+  box-shadow: $shadow-soft;
+
+  .nav-logo {
+    color: $color-golden-yellow;
+    background-color: $color-offwhite;
+    img {
+      width: 100px;
+      height: 100px;
+      background-color: $color-offwhite;
+    }
+  }
+
+  .nav-links {
+    color: $color-golden-yellow;
+    font-weight: 500;
+    padding: 6px 15px;
+    background-color: $color-offwhite;
+    border-radius: 20px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    &:hover {
+      background-color: $color-golden-yellow;
+      color: $color-offwhite;
+    }
+
+    .nav-button {
+      color: $color-offwhite !important;
+      background-color: $color-golden-yellow;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+
+      &:hover {
+        background-color: $heavy-golden-yellow;
+      }
+    }
+  }
+}

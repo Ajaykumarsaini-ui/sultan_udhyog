@@ -1,0 +1,25 @@
+// 🎨 Color Palette for Raw Potato Chips Company
+
+// Primary Colors (main brand feel)
+$color-golden-yellow: #FFC300;   // crispy chips golden
+$heavy-golden-yellow: #c99b04;
+$color-fresh-green:   #06D6A0;   // freshness / natural
+$color-rich-brown:    #8D6E63;   // potato skin / earthy
+$color-classic-red:   #FF5733;   // snack branding pop
+
+// Neutral Colors (backgrounds & text)
+$color-white:         #FFFFFF;   // pure background
+$color-offwhite:      #fdfaf4;   // warm background
+$color-dark:          #2C2C2C;   // text / contrast
+
+// Extra Accent (optional premium touch)
+$color-muted-gold:    #E0C097;
+$color-olive-green:   #556B2F;
+
+// Gradients
+$gradient-fresh:      linear-gradient(135deg, $color-golden-yellow, $color-fresh-green);
+$gradient-snack:      linear-gradient(135deg, $color-classic-red, $color-golden-yellow);
+
+// Shadows
+$shadow-soft:         0 4px 10px rgba(0, 0, 0, 0.1);
+$shadow-strong:       0 6px 20px rgba(0, 0, 0, 0.2);

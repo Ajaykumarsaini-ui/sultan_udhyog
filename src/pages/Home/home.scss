@@ -1,0 +1,39 @@
+@import "../../styles/variables";
+
+.hero {
+  .welcome {
+    color: $color-golden-yellow;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  .name {
+    color: $heavy-golden-yellow;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  .slogan {
+    color: $color-rich-brown;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  .punchline {
+    color: $color-dark;
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  }
+}
+
+.products{
+    .product-card{
+        background-color: $color-offwhite;
+        box-shadow: $shadow-soft;  
+        
+        &:hover{
+            box-shadow: $shadow-strong;
+        }
+
+        .product-name{
+          color: $color-golden-yellow;
+          padding-block: 15px;
+          font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+    }
+}
+
+

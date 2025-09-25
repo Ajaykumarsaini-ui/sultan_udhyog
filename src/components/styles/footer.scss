@@ -1,0 +1,23 @@
+@import'../../styles/variables.scss';
+
+.footer{
+    background-color: $color-offwhite;
+    color: $color-offwhite;
+    .quick-links{
+
+        .link-heading{
+            color: $color-rich-brown;
+            font-size: clamp(1.5rem, 2vw, 2.5rem);
+            font-weight: 600;
+        }
+
+        a{
+            color: $color-dark;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            &:hover{
+                color: $color-golden-yellow;
+            }
+        }
+    }
+}

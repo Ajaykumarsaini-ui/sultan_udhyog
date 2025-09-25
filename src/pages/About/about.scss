@@ -1,0 +1,53 @@
+@import "../../styles/variables";
+
+.company-overview {
+  .company-overview-heading {
+    color: $color-dark;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+  }
+
+  .punchline {
+    color: $color-dark;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.8;
+
+    .name {
+      color: $color-golden-yellow;
+      font-size: clamp(1.3rem, 2.5vw, 2.5rem);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-right: 10px;
+    }
+  }
+}
+
+.founder {
+  .heading {
+    color: $color-dark;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 600;
+  }
+
+  .name {
+    color: $color-golden-yellow;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .role {
+    color: $color-dark;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  .overview {
+    color: $color-dark;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    margin-top: 16px;
+    line-height: 1.8;
+  }
+}
