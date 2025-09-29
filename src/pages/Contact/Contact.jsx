@@ -1,12 +1,49 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react"; // ✅ Lucide Icons
 import "./contact.scss";
 import Button from "../../components/Button";
 import banner from "../../assets/home/Hero_banner.jpg";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [formdata, setFormData] = useState({
+    mobileno: "",
+    quantity: "",
+    address: "",
+    message: "",
+  });
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(formdata);
+
+    emailjs.init("dkjK35-tnv0U1IsTJ");
+
+    emailjs
+      .send(
+        "service_nyosl8n",
+        "template_ci638s1",
+        formdata,
+        "dkjK35-tnv0U1IsTJ"
+      )
+      .then((result) => {
+        console.log(result.text);
+      })
+      .catch((error) => {
+        console.log(error.text);
+      })
+      .finally(() => {
+        setFormData({
+          mobileno: "",
+          quantity: "",
+          address: "",
+          message: "",
+        });
+      });
+  };
+
   // Animation variants
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -17,16 +54,6 @@ const Contact = () => {
     }),
   };
 
-
-
-
-
-
-
-
-
-
-
   return (
     <div className="contact min-h-screen">
       {/* 🔹 Banner Section */}
@@ -36,7 +63,7 @@ const Contact = () => {
         animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
       >
         <img
-          className="w-full h-[70vh] object-cover"
+          className="w-full md:h-auto h-[300px]  object-cover"
           src={banner}
           alt="Company Banner"
         />
@@ -81,7 +108,7 @@ const Contact = () => {
               <Mail className="w-6 h-6 text-yellow-500" />
               <span>
                 <span className="font-semibold">Email:</span>{" "}
-                support@yourcompany.com
+                rs9796210@gmail.com{" "}
               </span>
             </p>
           </div>
@@ -99,7 +126,7 @@ const Contact = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-left">
             Contact Us
           </h2>
-          <form className="space-y-6">
+          <form onSubmit={onFormSubmit} className="space-y-6">
             {/* Mobile Number */}
             <div>
               <label className="block text-gray-700 font-medium mb-2">
@@ -108,6 +135,11 @@ const Contact = () => {
               <input
                 type="tel"
                 placeholder="Enter your mobile number"
+                required
+                name="mobileno"
+                onChange={(e) =>
+                  setFormData({ ...formdata, mobileno: e.target.value })
+                }
                 className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
               />
             </div>
@@ -118,7 +150,12 @@ const Contact = () => {
               </label>
               <input
                 type="number"
+                required
+                name="quantity"
                 placeholder="Enter quantity in kg"
+                onChange={(e) =>
+                  setFormData({ ...formdata, quantity: e.target.value })
+                }
                 className="w-full p-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500"
               />
             </div>
@@ -129,7 +166,12 @@ const Contact = () => {
               </label>
               <textarea
                 rows="1"
+                required
+                name="address"
                 placeholder="Enter your address"
+                onChange={(e) =>
+                  setFormData({ ...formdata, address: e.target.value })
+                }
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               ></textarea>
             </div>
@@ -140,6 +182,11 @@ const Contact = () => {
               </label>
               <textarea
                 rows="2"
+                required
+                name="message"
+                onChange={(e) =>
+                  setFormData({ ...formdata, message: e.target.value })
+                }
                 placeholder="Write your message here..."
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
               ></textarea>

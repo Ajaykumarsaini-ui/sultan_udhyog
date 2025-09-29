@@ -36,7 +36,7 @@ const About = () => {
         animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
       >
         <img
-          className="w-full h-[70vh] object-cover"
+          className="w-full h-auto object-cover"
           src={banner}
           alt="Company Banner"
         />

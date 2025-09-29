@@ -26,8 +26,8 @@ const Home = () => {
   return (
     <div>
       {/* hero */}
-      <section className="px-4 hero  py-2 bg-gradient-to-r from-yellow-100 via-yellow-50 to-white min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8">
+      <section className="px-4 hero bg-gradient-to-r from-yellow-100 via-yellow-50 to-white min-h-screen flex items-center">
+        <div className="mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <motion.div
             className="flex-1 text-center md:text-left space-y-4"
@@ -65,6 +65,10 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+
+
+      
 
       {/* banner  */}
       <section className="banner my-16">

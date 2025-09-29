@@ -51,7 +51,7 @@ const Navbar = () => {
               key={link}
               className="hover:text-yellow-500 cursor-pointer nav-links"
             >
-              <Link
+              <Link onClick={() => setIsOpen(false)}
                 to={
                   link.toLowerCase() === "home"
                     ? "/"
@@ -98,7 +98,7 @@ const Navbar = () => {
                   key={link}
                   className="hover:text-yellow-500 block w-fit text-center cursor-pointer nav-links"
                 >
-                  <Link
+                  <Link onClick={() => setIsOpen(false)}
                     to={
                       link.toLowerCase() === "home"
                         ? "/"
