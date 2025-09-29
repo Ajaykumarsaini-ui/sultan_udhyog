@@ -156,6 +156,7 @@ const Contact = () => {
                 placeholder="Enter your mobile number"
                 required
                 name="mobileno"
+                value={formdata.mobileno}
                 onChange={(e) =>
                   setFormData({ ...formdata, mobileno: e.target.value })
                 }
@@ -171,6 +172,7 @@ const Contact = () => {
                 type="number"
                 required
                 name="quantity"
+                value={formdata.quantity}
                 placeholder="Enter quantity in kg"
                 onChange={(e) =>
                   setFormData({ ...formdata, quantity: e.target.value })
@@ -187,6 +189,7 @@ const Contact = () => {
                 rows="1"
                 required
                 name="address"
+                value={formdata.address}
                 placeholder="Enter your address"
                 onChange={(e) =>
                   setFormData({ ...formdata, address: e.target.value })
@@ -203,6 +206,7 @@ const Contact = () => {
                 rows="2"
                 required
                 name="message"
+                value={formdata.message}
                 onChange={(e) =>
                   setFormData({ ...formdata, message: e.target.value })
                 }
