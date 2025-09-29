@@ -6,6 +6,9 @@ import "./contact.scss";
 import Button from "../../components/Button";
 import banner from "../../assets/home/Hero_banner.jpg";
 import emailjs from "@emailjs/browser";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+
 
 const Contact = () => {
   const [formdata, setFormData] = useState({
@@ -29,6 +32,8 @@ const Contact = () => {
         "dkjK35-tnv0U1IsTJ"
       )
       .then((result) => {
+        console.log("Email sent successfully!");
+        toast.success("Product order sent successfully!");
         console.log(result.text);
       })
       .catch((error) => {
@@ -56,6 +61,7 @@ const Contact = () => {
 
   return (
     <div className="contact min-h-screen">
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar closeOnClick pauseOnHover draggable theme="dark" limit={1} className="toast-container" style={{ zIndex: 9999 }}  />
       {/* 🔹 Banner Section */}
       <motion.div
         className="banner"

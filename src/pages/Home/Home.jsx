@@ -7,6 +7,7 @@ import Banner from "../../assets/home/Hero_banner.jpg";
 import sev from "../../assets/home/sev.jpeg";
 import lining from "../../assets/home/Chips-Lining.jpg";
 
+
 const Home = () => {
   const products = [
     {
