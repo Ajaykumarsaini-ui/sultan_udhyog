@@ -58,7 +58,7 @@ const OurProducts = () => {
         animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
       >
         <img
-          className="w-full h-auto object-cover"
+          className="w-full md:h-auto h-[200px]"
           src={banner}
           alt="Company Banner"
         />

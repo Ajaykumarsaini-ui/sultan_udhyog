@@ -63,7 +63,7 @@ const Contact = () => {
         animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
       >
         <img
-          className="w-full md:h-auto h-[300px]  object-cover"
+          className="w-full md:h-auto h-[200px]"
           src={banner}
           alt="Company Banner"
         />
