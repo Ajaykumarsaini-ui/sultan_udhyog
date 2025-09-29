@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div>
       {/* hero */}
-      <section className="px-4 py-8 hero bg-gradient-to-r from-yellow-100 via-yellow-50 to-white min-h-[100dvh] flex items-center">
+      <section className="px-4 py-4 hero bg-gradient-to-r from-yellow-100 via-yellow-50 to-white min-h-[100dvh] flex items-center">
         <div className="mx-auto w-full flex flex-col  md:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <motion.div
@@ -70,7 +70,7 @@ const Home = () => {
       {/* banner  */}
       <section className="banner  my-16">
         <img
-          className="w-full md:h-auto h-[200px]"
+          className="w-full md:h-auto h-[300px]"
           src={Banner}
           alt="Company Banner"
         />{" "}

@@ -7,7 +7,7 @@ import Button from "../../components/Button";
 import banner from "../../assets/home/Hero_banner.jpg";
 import emailjs from "@emailjs/browser";
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const Contact = () => {
@@ -69,7 +69,7 @@ const Contact = () => {
         animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
       >
         <img
-          className="w-full md:h-auto h-[200px]"
+          className="w-full md:h-auto h-[300px]"
           src={banner}
           alt="Company Banner"
         />
