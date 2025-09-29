@@ -2,18 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./about.scss";
 import banner from "../../assets/home/Hero_banner.jpg";
+import dummyman from "../../assets/components/dummyman.jpg";
 
 const About = () => {
   const owner = {
     name: "Rahul Saini",
     role: "Founder & CEO",
-    image: "/images/owner.jpg",
+    image: dummyman,
   };
 
   const employees = [
-    { name: "Amit Verma", role: "Production Manager", image: "/images/emp1.jpg" },
-    { name: "Neha Singh", role: "Quality Analyst", image: "/images/emp2.jpg" },
-    { name: "Vikram Yadav", role: "Machine Operator", image: "/images/emp3.jpg" },
+    { name: "Amit Verma", role: "Production Manager", image: dummyman },
+    { name: "Neha Singh", role: "Quality Analyst", image: dummyman },
+    { name: "Vikram Yadav", role: "Machine Operator", image: dummyman },
   ];
 
   // Variants for animations
@@ -91,29 +92,24 @@ const About = () => {
           </motion.h2>
 
           {/* Owner Section */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={owner.image}
-              alt={owner.name}
-              className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full mx-auto shadow-xl border-4 border-gray-200"
-            />
-            <h3 className="name mt-6">{owner.name}</h3>
-            <p className="role">{owner.role}</p>
-            <p className="overview mt-6 max-w-3xl mx-auto leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum at
-              necessitatibus, saepe molestias quas quia asperiores aspernatur nulla
-              ut laborum nesciunt fugit dicta. Expedita maxime atque perferendis
-              enim voluptates doloremque delectus dolorem perspiciatis. In,
-              provident! Libero labore officiis veniam repellendus repellat soluta
-              porro, temporibus quod!
-            </p>
-          </motion.div>
+         <motion.div
+  className="text-center mb-16"
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  <img
+    src={owner.image}
+    alt={owner.name}
+    className="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full mx-auto shadow-xl border-4 border-gray-200"
+  />
+  <h3 className="name mt-6">{owner.name}</h3>
+  <p className="role">{owner.role}</p>
+  <p className="overview mt-6 max-w-3xl mx-auto leading-relaxed">
+    {owner.name} founded Sultan Udhyog with a vision to deliver high-quality, fresh potato chips to wholesalers and retailers across India. With years of experience in the industry, he ensures that every batch meets strict quality standards. His commitment to customer satisfaction and innovation has helped the company grow steadily. Today, Sultan Udhyog stands as a trusted name, providing reliable service and premium products to its clients nationwide.
+  </p>
+</motion.div>
 
           {/* Employees Grid */}
           <motion.div

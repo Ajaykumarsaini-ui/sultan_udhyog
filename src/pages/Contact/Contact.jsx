@@ -6,11 +6,11 @@ import "./contact.scss";
 import Button from "../../components/Button";
 import banner from "../../assets/home/Hero_banner.jpg";
 import emailjs from "@emailjs/browser";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
-
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const [formdata, setFormData] = useState({
     mobileno: "",
     quantity: "",
@@ -21,6 +21,7 @@ const Contact = () => {
   const onFormSubmit = (e) => {
     e.preventDefault();
     console.log(formdata);
+    setLoading(true);
 
     emailjs.init("dkjK35-tnv0U1IsTJ");
 
@@ -40,6 +41,7 @@ const Contact = () => {
         console.log(error.text);
       })
       .finally(() => {
+        setLoading(false);
         setFormData({
           mobileno: "",
           quantity: "",
@@ -61,7 +63,18 @@ const Contact = () => {
 
   return (
     <div className="contact min-h-screen">
-      <ToastContainer position="top-center" autoClose={3000} hideProgressBar closeOnClick pauseOnHover draggable theme="dark" limit={1} className="toast-container" style={{ zIndex: 9999 }}  />
+      <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="dark"
+        limit={1}
+        className="toast-container"
+        style={{ zIndex: 9999 }}
+      />
       {/* 🔹 Banner Section */}
       <motion.div
         className="banner"
@@ -202,9 +215,10 @@ const Contact = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
+              disabled={loading}
               className="mt-4 px-6 cursor-pointer py-2 bg-yellow-600 text-white font-semibold rounded-lg shadow-md"
             >
-              Submit
+              {loading ? "Submitting..." : "Submit"}
             </motion.button>
           </form>
         </motion.div>
