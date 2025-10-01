@@ -4,6 +4,8 @@ import "./about.scss";
 import banner from "../../assets/home/Hero_banner.jpg";
 import dummyman from "../../assets/components/dummyman.jpg";
 
+
+
 const About = () => {
   const owner = {
     name: "Rahul Saini",
